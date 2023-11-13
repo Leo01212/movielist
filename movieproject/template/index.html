@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for i in ob %}
+        <div class="col-md-3">
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <p class="card-text">{{i.des}}</p>
+                <a href="{% url 'movieapp:details' i.id %}" class="btn btn-primary">View more details</a>
+      </div>
+    </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<br>
+
+
+<div style="text-align:center;">
+
+</div>
+{% endblock %}
+</body>
+</html>
